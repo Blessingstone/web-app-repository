@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Registration Form</title>
+	<link th:href="@{/css/form.css}" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="form-center">
+	<form th:action="@{/submitStudent}" th:object="${student}" method="post">
+		<h1>Student Registration Form</h1>
+		<div class="form-group">
+			<label for="id">Student Admission No:</label>
+			<input type="text" th:field="*{id}" placeholder="Admission_no" />
+		</div>
+
+		<div class="form-group">
+			<label for="firstname">First Name:</label>
+			<input type="text" th:field="*{firstName}" placeholder="First_name" />
+		</div>
+		<div class="form-group">
+			<label for="lastname">Last Name:</label>
+			<input type="text" th:field="*{lastName}" placeholder="Last_name" />
+		</div>
+		<div class="form-group">
+			<label for="age">Age:</label>
+			<input type="text" th:field="*{age}" placeholder="Age" />
+		</div>
+		<div class="form-group">
+			<label for="course">Course:</label>
+			<input type="text" th:field="*{course}" placeholder="coures_name" />
+		</div>
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" th:field="*{emailAddress}" placeholder="Email" />
+		</div>
+
+		<div class="form-group">
+			<label for="password">Password:</label>
+			<input type="password" th:field="*{password}" placeholder="Password" />
+		</div>
+		<div class="form-group">
+			<button type="submit">Register</button>
+		</div>
+	</form>
+	</div>
+</body>
+
+</html>
